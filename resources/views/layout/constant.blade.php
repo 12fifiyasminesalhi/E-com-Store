@@ -192,7 +192,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<p>Nous sommes une équipe passionnée dédiée à offrir des produits de qualité dans le domaine de la santé, du bien-être et de la beauté. Notre mission est de rendre accessibles des solutions fiables et innovantes, tout en garantissant un service client attentif et personnalisé..</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
