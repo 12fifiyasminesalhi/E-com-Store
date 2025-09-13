@@ -132,8 +132,8 @@
 								<p class="subtitle">Prenez soin de votre peau, naturellement</p>
 								<h1>Produits de soins & beauté</h1>
 								<div class="hero-btns">
-									<a href="shop.html" class="boxed-btn">Fruit Collection</a>
-									<a href="contact.html" class="bordered-btn">Contact Us</a>
+									<a href="/Products" class="boxed-btn">Our Products</a>
+									<a href="#contact" class="bordered-btn">Contact Us</a>
 								</div>
 							</div>
 						</div>
@@ -151,8 +151,8 @@
 								<p class="subtitle">Compléments alimentaires</p>
 								<h1>Vitalité & Immunité au quotidien</h1>
 								<div class="hero-btns">
-									<a href="shop.html" class="boxed-btn">Visit Shop</a>
-									<a href="contact.html" class="bordered-btn">Contact Us</a>
+									<a href="#categories" class="boxed-btn">Visit Shop</a>
+									<a href="#contact" class="bordered-btn">Contact Us</a>
 								</div>
 							</div>
 						</div>
@@ -170,8 +170,8 @@
 								<p class="subtitle">Ton sérieux et professionnel</p>
 								<h1>Matériel médical de qualité professionnell</h1>
 								<div class="hero-btns">
-									<a href="shop.html" class="boxed-btn">Visit Shop</a>
-									<a href="contact.html" class="bordered-btn">Contact Us</a>
+									<a href="#categories" class="boxed-btn">Visit Shop</a>
+									<a href="#contact" class="bordered-btn">Contact Us</a>
 								</div>
 							</div>
 						</div>
