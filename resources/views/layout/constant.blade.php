@@ -60,7 +60,7 @@
 						<nav class="main-menu">
 							<ul>
 								<li class="current-list-item"><a href="/">Home</a>
-								<li><a href="/About">About</a></li>
+								<li><a href="/Products">Product</a></li>
 								<li><a href="#categories ">categories</a>
 									<ul class="sub-menu">
 										<li><a href="#categories">Soins du visage</a></li>

@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class parapharme extends Model
+class products extends Model
 {
     use HasFactory;
 
-public function products()
-    {
-        return $this->hasMany(products::class, 'category_id');
-    }
-
-
-
+public function category()
+{
+    return $this-> belongsTo(parapharme::class,'category_id');
+}
 
 }

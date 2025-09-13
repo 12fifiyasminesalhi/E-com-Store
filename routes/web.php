@@ -4,6 +4,7 @@ use App\Http\Controllers\parapharmcontroller;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/', function () {
 Route::get('/About', function () {
     return view('About');
 });
+Route::get('/Products', [ProductController::class, 'index']);
+
+
 
 
 
