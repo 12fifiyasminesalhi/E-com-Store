@@ -1,10 +1,12 @@
 <?php
 
-use App\Http\Controllers\parapharmcontroller;
+use App\Http\Controllers\Parapharmcontroller;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ProductController;
+
+use App\Models\Parapharme;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +20,22 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-     $result= DB::table('parapharme')->get();
+    $result= Parapharme::all();
+   // dd($result);
+           
+    // $result= DB::table('parapharme')->get();
    // dd($result);
     return view('welcome',  ['parapharme'=>$result] );
+    
 });
+
+
 Route::get('/About', function () {
     return view('About');
 });
-Route::get('/Products', [ProductController::class, 'index']);
+Route::get('/Products/{catid}',
+[ProductController::class, 'index']);
+
 
 
 
