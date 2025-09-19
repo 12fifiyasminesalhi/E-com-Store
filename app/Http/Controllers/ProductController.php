@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\products;
 use Illuminate\Support\Facades\DB;
@@ -13,13 +14,13 @@ class ProductController extends Controller
     { 
       
     if($catid === null){
-            $result = products::all();
+            $result = Product::all();
             
           }
       
       else{
         
-           $result = products::where('category_id', $catid)->get();
+           $result = Product::where('category_id', $catid)->get();
           }
           return view('Product', ['products'=>$result] );
 

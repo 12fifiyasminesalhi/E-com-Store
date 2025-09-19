@@ -33,7 +33,7 @@ Route::get('/', function () {
 Route::get('/About', function () {
     return view('About');
 });
-Route::get('/Products/{catid}',
+Route::get('/Products/{catid?}',
 [ProductController::class, 'index']);
 
 

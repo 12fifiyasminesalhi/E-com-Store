@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModelProducts extends Migration
+class CreateModelProduct extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateModelProducts extends Migration
      */
     public function up()
     {
-        Schema::create('model_products', function (Blueprint $table) {
+        Schema::create('model_poducts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
