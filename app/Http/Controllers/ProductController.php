@@ -16,11 +16,13 @@ class ProductController extends Controller
     if($catid === null){
             $result = Product::all();
             
+        
+            
           }
       
       else{
         
-           $result = Product::where('category_id', $catid)->get();
+           $result = product::where('category_id', $catid)->get();
           }
           return view('Product', ['products'=>$result] );
 

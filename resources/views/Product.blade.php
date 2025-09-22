@@ -21,7 +21,14 @@
 							<a href="single-product.html" ><img style="max-height:250px !important ; min-height:250px !important" src={{ url ($item-> imagepath)}} alt=""></a>
 						</div>
 						<h3>{{$item-> name}}</h3>
-						<p class="product-price"><span>{{$item-> quantity}}</span>{{$item-> price}} $</p>
+						<p class="product-price"><span>{{$item-> quantity}}</span>
+							@auth
+
+					         {{$item-> price}} $</p>
+							@else
+                              <p><a href="{{ route('login') }}"> Connectez-vous</a> pour voir les prix</p>
+							@endauth
+							
 						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
 				</div>

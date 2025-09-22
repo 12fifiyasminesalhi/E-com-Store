@@ -30,6 +30,14 @@
 	<link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 	<!-- responsive -->
 	<link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+	 <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 </head>
 <body>
@@ -60,6 +68,39 @@
 						<nav class="main-menu">
 							<ul>
 								<li class="current-list-item"><a href="/">Home</a>
+									  @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li>
+                                <a>
+                                    {{ Auth::user()->name }}
+                                </a>
+							</li>
+                               <li>
+    
+                                    <a  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+							   
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+							   </li>
+                        
+                        @endguest
 								<li><a href="/Products">Product</a></li>
 								<li><a href="#categories ">categories</a>
 									<ul class="sub-menu">
