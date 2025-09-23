@@ -6,26 +6,25 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\products;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class ProductController extends Controller
 {
     public function index($catid=null)
     { 
+         if($catid === null ){
+         
+          $result = Product::all(); 
+         }
       
-    if($catid === null){
-            $result = Product::all();
-            
-        
-            
-          }
-      
-      else{
+        else{
         
            $result = product::where('category_id', $catid)->get();
           }
           return view('Product', ['products'=>$result] );
-
+         
+      
     }
 
 

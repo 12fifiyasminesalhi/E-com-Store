@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
     ['name'=>'Lait Corporel Nourrissant','description'=>'Lait corporel pour nourrir la peau','price'=>'14','category_id'=>'2','imagepath'=>'assets/img/b2.jpg'],
     ['name'=>'Shampooing Fortifiant','description'=>'Shampooing pour renforcer les cheveux','price'=>'12','category_id'=>'3','imagepath'=>'assets/img/b3.jpg'],
     ['name'=>'Masque Capillaire Réparateur','description'=>'Masque pour réparer les cheveux abîmés','price'=>'15','category_id'=>'3','imagepath'=>'assets/img/logo.jpg'],
- 
+    
     ]);
     
 

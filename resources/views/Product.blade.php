@@ -25,11 +25,8 @@
 							@auth
 
 					         {{$item-> price}} $</p>
-							@else
-                              <p><a href="{{ route('login') }}"> Connectez-vous</a> pour voir les prix</p>
-							@endauth
-							
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						     <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					       @endauth
 					</div>
 				</div>
 				  @endforeach
