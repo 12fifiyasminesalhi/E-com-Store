@@ -6,12 +6,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "filament/filament": "2.17.58",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.4"
+        "laravel/ui": "^3.4",
+        "spatie/laravel-permission": "^6.21"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -34,6 +36,9 @@
         }
     },
     "scripts": {
+        "post-update-cmd": [
+            "@php artisan filament:upgrade"
+       ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -47,6 +52,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
+        
     },
     "extra": {
         "laravel": {

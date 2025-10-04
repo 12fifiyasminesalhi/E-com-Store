@@ -12,4 +12,12 @@ class Product extends Model
 {
     return $this-> belongsTo(parapharme::class,'category_id');
 }
+protected $fillable = [
+        'name',
+        'description',
+        'price',
+    
+        'stock',
+        'imagepath', // ajoute tous les champs nécessaires
+    ];
 }
