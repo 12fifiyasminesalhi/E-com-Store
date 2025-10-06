@@ -16,7 +16,7 @@ protected $fillable = [
         'name',
         'description',
         'price',
-    
+         'category_id',
         'stock',
         'imagepath', // ajoute tous les champs nécessaires
     ];

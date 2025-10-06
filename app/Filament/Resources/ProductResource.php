@@ -17,6 +17,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class ProductResource extends Resource
 {
@@ -31,7 +32,7 @@ class ProductResource extends Resource
                 TextInput::make('name')->required(),
             TextInput::make('price')->numeric()->required(),
             Textarea::make('description'),
-            FileUpload::make('image'),
+            FileUpload::make('imagepath')->image()->directory('products')->required(),
                 //
             ]);
     }
@@ -42,7 +43,10 @@ class ProductResource extends Resource
             ->columns([
                  TextColumn::make('name')->sortable()->searchable(),
             TextColumn::make('price'),
-            ImageColumn::make('image')->circular(),
+            ImageColumn::make('imagepath')->circular()
+                                 ->label('Image')
+                               ->url(fn ($record) => Storage::url($record->imagepath)),//afficher les images qui sont stockées dans strorage
+                        
                 //
             ])
             ->filters([

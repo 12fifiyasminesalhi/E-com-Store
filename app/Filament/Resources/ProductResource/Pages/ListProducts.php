@@ -5,6 +5,7 @@ namespace App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
+use illuminate\facades\Storage;
 
 class ListProducts extends ListRecords
 {

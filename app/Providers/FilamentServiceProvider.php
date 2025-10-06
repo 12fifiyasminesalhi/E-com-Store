@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-
+use App\Filament\Widgets\LatestProducts;
 use Filament\Facades\Filament;
 use Filament\Panel;
 use App\Filament\Widgets\UserStats;     
@@ -31,6 +31,7 @@ class FilamentServiceProvider extends ServiceProvider
           Filament::serving(function () {
             Filament::registerWidgets([
                 UserStats::class,
+                LatestProducts::class,
             ]);
         });
     

@@ -18,7 +18,8 @@
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.html" ><img style="max-height:250px !important ; min-height:250px !important" src={{ url ($item-> imagepath)}} alt=""></a>
+							<a href="single-product.html" ><img style="max-height:250px !important ; min-height:250px !important" src="{{Storage::url($item->imagepath)}}"alt=""></a>
+							
 						</div>
 						<h3>{{$item-> name}}</h3>
 						<p class="product-price"><span>{{$item-> quantity}}</span>
