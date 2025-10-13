@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
       } 
     
      $products=([
-        ['name'=>'Crème Hydratante','description'=>'Crème pour hydrater la peau','price'=>'19','category_id'=>'1','imagepath'=>'storage/products/b1.jpg'],
+        ['name'=>'Crème Hydratante','description'=>'Crème pour hydrater la peau','price'=>'19','category_id'=>'1','imagepath'=>'products/b1.jpg'],
     ['name'=>'Sérum Anti-Âge','description'=>'Sérum pour réduire les rides','price'=>'29','category_id'=>'1','imagepath'=>'products/b2.jpg'],
     ['name'=>'Gel Douche Revitalisant','description'=>'Gel douche pour revitaliser la peau','price'=>'9','category_id'=>'2','imagepath'=>'products/b1.jpg'],
     ['name'=>'Lait Corporel Nourrissant','description'=>'Lait corporel pour nourrir la peau','price'=>'14','category_id'=>'2','imagepath'=>'products/b2.jpg'],
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
     ['name'=>'Après-Shampooing Réparateur','description'=>'Après-shampooing pour réparer les cheveux','price'=>'15','category_id'=>'3','imagepath'=>'products/b1.jpg'],
     
    
-    
+
     ]);
     foreach ($products as $product) {
     \App\Models\Product::updateOrInsert(

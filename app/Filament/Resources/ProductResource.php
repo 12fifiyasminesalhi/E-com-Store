@@ -29,10 +29,14 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
+               // Select::make('category_id')
+                    //->label('Category')
+                    //->relationship('parapharme', 'name')
+                   // ->required(),
                 TextInput::make('name')->required(),
-            TextInput::make('price')->numeric()->required(),
-            Textarea::make('description'),
-            FileUpload::make('imagepath')->image()->directory('products')->required(),
+                TextInput::make('price')->numeric()->required(),
+                Textarea::make('description'),
+                FileUpload::make('imagepath')->image()->directory('products')->required(),
                 //
             ]);
     }
@@ -41,11 +45,16 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                 TextColumn::make('name')->sortable()->searchable(),
+            TextColumn::make('name')->sortable()->searchable(),
             TextColumn::make('price'),
-            ImageColumn::make('imagepath')->circular()
-                                 ->label('Image')
-                               ->url(fn ($record) => Storage::url($record->imagepath)),//afficher les images qui sont stockées dans strorage
+            ImageColumn::make('imagepath')->label('Image')
+                                 ->disk('public')
+                               // ->circular()
+
+
+                              ->getStateUsing(fn ($record) => asset('storage/' . $record->imagepath))
+                              //->circular()
+                             ->width(50),//afficher les images qui sont stockées dans strorage
                         
                 //
             ])
