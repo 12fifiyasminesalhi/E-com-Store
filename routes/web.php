@@ -5,9 +5,10 @@ use App\Http\Controllers\Parapharmcontroller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
 
-
+use App\Models\Cart;
 use App\Models\Parapharme;
 use GuzzleHttp\Middleware;
 
@@ -48,3 +49,13 @@ Route::get('/Products/{catid?}',
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/Cart', [App\Http\Controllers\CartController::class, 'show'])->middleware('auth');
+Route::post('/addtocart/{product_id}', function ($product_id) {
+    $newcart= new Cart();
+    $newcart->product_id= $product_id;
+    $newcart->user_id=auth()-> user()-> id;
+    $newcart->quantity=1;
+    $newcart->save();
+    return redirect('/Cart');
+    
+})->middleware('auth');

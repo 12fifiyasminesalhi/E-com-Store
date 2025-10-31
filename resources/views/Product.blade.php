@@ -26,7 +26,13 @@
 							@auth
 
 					         {{$item-> price}} $</p>
-						     <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						     <a href="" class="cart-btn"  onclick="event.preventDefault();
+                                                     document.getElementById('addtocart').submit();">
+								<i class="fas fa-shopping-cart"></i> Add to Cart</a>
+								 <form id="addtocart" action="/addtocart/{{$item -> id}}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>	
+
 					       @endauth
 					</div>
 				</div>

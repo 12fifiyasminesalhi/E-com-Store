@@ -11,7 +11,7 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         // Créer le rôle "admin" s’il n’existe pas déjà
-        $adminRole = Role::firstOrCreate(['name' => 'admin']);
+        $adminRole = Role::firstOrCreate(['name' => 'admin', 'guard_name' => 'web']);
 
         // Créer ou mettre à jour l'utilisateur FaroukSalhi
         $user = User::updateOrCreate(

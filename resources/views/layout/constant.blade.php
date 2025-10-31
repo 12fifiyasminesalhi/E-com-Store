@@ -71,13 +71,13 @@
 									  @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __("S'inscrire") }}</a>
                                 </li>
                             @endif
                         @else
@@ -101,8 +101,8 @@
 							   </li>
                         
                         @endguest
-								<li><a href="/Products">Product</a></li>
-								<li><a href="#categories ">categories</a>
+								<li><a href="/Products">Produits</a></li>
+								<li><a href="#categories ">catégories</a>
 									<ul class="sub-menu">
 										<li><a href="#categories">Soins du visage</a></li>
 										<li><a href="#categories">Complements Alimentaires</a></li>
@@ -111,28 +111,30 @@
 										
 									</ul>
 								</li>
-								<li><a href="news.html">News</a>
+								<!--<li><a href="news.html">News</a>
 									<ul class="sub-menu">
 										<li><a href="news.html">News</a></li>
 										<li><a href="single-news.html">Single News</a></li>
 									</ul>
-								</li>
-								<li><a href="#contact">Contact US</a></li>
-								<li><a href="shop.html">Shop</a>
+								</li>-->
+								<li><a href="#contact">Nous Contacter</a></li>
+								<li><a href="/Products">Shop</a>
 									<ul class="sub-menu">
-										<li><a href="#categories">Shop</a></li>
+										<li><a href="/Products">Shop</a></li>
 								
 									</ul>
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="/addtocart" ><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<a class="mobile-show search-bar-icon" href="#" >
+													 <i class="fas fa-search"></i></a>
+						 					 
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
@@ -173,8 +175,8 @@
 								<p class="subtitle">Prenez soin de votre peau, naturellement</p>
 								<h1>Produits de soins & beauté</h1>
 								<div class="hero-btns">
-									<a href="/Products" class="boxed-btn">Our Products</a>
-									<a href="#contact" class="bordered-btn">Contact Us</a>
+									<a href="/Products" class="boxed-btn">Nos Produits</a>
+									<a href="#contact" class="bordered-btn">Contactez nous</a>
 								</div>
 							</div>
 						</div>

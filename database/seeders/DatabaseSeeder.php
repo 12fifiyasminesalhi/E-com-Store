@@ -21,12 +21,12 @@ class DatabaseSeeder extends Seeder
         ['id'=>'3','name'=>'Soins des Cheveux','description'=>'Produits pour le soin des cheveux','imagepath'=>'assets/img/a3.jpg'],
        ];
        DB::table('parapharme')->insertOrIgnore($categories);
-       foreach ($categories as $category) {
+      // foreach ($categories as $category) {}
    // DB::table('parapharme')->updateOrInsert(
       //  ['id' => $category['id']],
        // $category
    // );
-      } 
+     // } 
     
      $products=([
         ['name'=>'Crème Hydratante','description'=>'Crème pour hydrater la peau','price'=>'19','category_id'=>'1','imagepath'=>'products/b1.jpg'],
