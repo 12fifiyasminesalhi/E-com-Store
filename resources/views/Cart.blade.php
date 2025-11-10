@@ -20,12 +20,12 @@
                                @foreach ($carts as $item) 
                                 <tr>
 									
-									<td ><img src="{{Storage::url($item->imagepath)}}" alt=""></td>
-									<td>{{$item-> name}}</td>
-									<td>{{$item -> price}}</td>
-									<td>{{$item -> quantity}}</td>
+									<td > <img src="{{Storage::url($item->product->imagepath) }}" alt="{{ $item->product->name }}" width="80"></td>
+									<td>{{$item->product->name}}</td>
+									<td>{{$item ->product->price}}</td>
+									<td>{{$item->quantity}}</td>
 									<td>
-										{{$item -> price * $item -> quantity}}
+										{{$item ->price * $item -> quantity}}
 									</td>
 								</tr>
                                     

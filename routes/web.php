@@ -51,11 +51,26 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/Cart', [App\Http\Controllers\CartController::class, 'show'])->middleware('auth');
 Route::post('/addtocart/{product_id}', function ($product_id) {
-    $newcart= new Cart();
-    $newcart->product_id= $product_id;
-    $newcart->user_id=auth()-> user()-> id;
-    $newcart->quantity=1;
-    $newcart->save();
+  //  $newcart= new Cart();
+   // $newcart->product_id= $product_id;
+   // $newcart->user_id=auth()-> user()-> id;
+   // $newcart->quantity=1;
+    
+     $userId = auth()->id();
+      $cart = Cart::where('user_id', $userId)
+                ->where('product_id', $product_id)
+                ->first();
+
+    if ($cart) {
+        $cart->quantity += 1;
+        $cart->save();
+    } else {
+        Cart::create([
+            'user_id' => $userId,
+            'product_id' => $product_id,
+            'quantity' => 1
+        ]);
+    }
     return redirect('/Cart');
     
 })->middleware('auth');
